@@ -1,0 +1,53 @@
+<html>
+        <body><html>
+    <head>
+        <title>webpage</title>
+    </head>
+    <body>
+        <hr>
+
+        <center>
+            <h3>Codeyounge: Calculate days between dates
+                <br><br></h3>
+
+                <p><b>Enter date1</b>
+                <input type="date" id="dateinput1">
+                <br><br>
+                <br><br>
+                <b>Enter date2</b>
+                <input type="date" id="dateinput2">
+                <br><br>
+                <button onclick="daysDifference()">
+                    Calculate number of days
+                </button>
+                </p>
+        </center>
+        <hr>
+        <h2 id="result"></h2>
+            </hr>
+            </body>
+</html>
+</body>
+        <style>body{
+    background-color: brown;
+}
+input{
+    background-color:royalblue;
+}
+</style>
+        <script>function daysDifference(){
+    //define two variadles and fetch the input from
+    var dateI1= document.getElementById("dateinput1").value;
+    var dateI2=document.getElementById("dateinput2").value;
+//define two date object variable to store to the date values to store the date value
+var date1=new Date(dateI1)
+var date2=new Date(dateI2)
+
+//calculate time difference
+var timedifference= date2.getTime()-date1.getTime();
+
+var result=timedifference/(1000*60*60*24);
+
+return document.getElementById("result").innerHTML=result+" days between both days"
+}</script>
+      </html>
